@@ -17,18 +17,18 @@
 
 ### Step-1: Create Security Groups for Services
 
-- We will create `vprofile-ELB-SG` first. We will configure `Inbound` rules to Allow both `HTTP` and `HTTPS` on port `80` and `443` respectively  from Anywhere `IPv4` and `IPv6`.
+- Create `vprofile-ELB-SG` first, then configure `Inbound` rules to Allow both `HTTP` and `HTTPS` on port `80` and `443` respectively  from Anywhere `IPv4` and `IPv6`.
 ![](images/ELB-SecGrp.png)
 
-- Next we will create `vprofile-app-SG`. We will open port `8080` to accept connections from `vprofile-ELb-SG`.
+- Next, create `vprofile-app-SG`. Open port `8080` to accept connections from `vprofile-ELb-SG`.
 ![](images/App-SecGrp.png)
 
-- Finally, we will create `vprofile-backend-SG`. WE need to open port `3306` for `MySQL`, `11211` for `Memcached` and `5672` for `RabbitMQ` server. We can check whcih ports needed fro aplication services to communicate each other from `application.properties` file under `src/main/resources` directory.We also need to open commucation `AllTraffic` from own SecGrp for backend services to communicate with each other.
+- Finally, create `vprofile-backend-SG`. WE need to open port `3306` for `MySQL`, `11211` for `Memcached` and `5672` for `RabbitMQ` server. Check which ports is needed for aplication services to communicate each other from `application.properties` file under `src/main/resources` directory.We also need to open commucation `AllTraffic` from own SecGrp for backend services to communicate with each other.
 ![](images/Backend-SecGrp.png)
 
 ### Step-2: Create KeyPair to Connect EC2 instances
 
-- We will create a Keypair to connect our instances via SSH.
+- Create a Keypair to connect our instances via SSH.
 ![](images/KeyPair.png)
 
 
@@ -45,7 +45,7 @@ InstanceType: t2.micro
 SecGrp: vprofile-backend-SG
 UserData: mysql.sh
 ```
-- Once our instance is ready, we can SSH into the server and check if userdata script is executed.We can also check status of mariadb.
+- Once instance is ready, SSH into the server and check if userdata script is executed also, check status of mariadb.
 ```sh
 ssh -i vprofile-prod-key.pem centos@<public_ip_of_instance>
 sudo su -
@@ -65,7 +65,7 @@ InstanceType: t2.micro
 SecGrp: vprofile-backend-SG
 UserData: memcache.sh
 ```
-- Once our instance is ready, we can SSH into the server and check if userdata script is executed.We can also check status of memcache service and if it is listening on port 11211.
+- Once instance is ready, SSH into the server and check if userdata script is executed, also check status of memcache service and if it is listening on port 11211.
 ```sh
 ssh -i vprofile-prod-key.pem centos@<public_ip_of_instance>
 sudo su -
@@ -86,7 +86,7 @@ InstanceType: t2.micro
 SecGrp: vprofile-backend-SG
 UserData: rabbitmq.sh
 ```
-- Once our instance is ready, we can SSH into the server and check if userdata script is executed.We can also check status of rabbitmq service.
+- Once instance is ready, SSH into the server and check if userdata script is executed.We can also check status of rabbitmq service.
 ```sh
 ssh -i vprofile-prod-key.pem centos@<public_ip_of_instance>
 sudo su -
@@ -109,7 +109,7 @@ mc01 172.31.87.132
 
 ![](images/route53-records.png)
 
-- Now we will create records for our backend services. The purpose of this activity is we will use these record names in our `application.properties` file. Even if IP address of the services, our application won't need to change the config file.  
+- Create records for our backend services. The purpose of this activity is so we can use these record names in our `application.properties` file. Even if IP address of the services, our application won't need to change the config file.  
 ```sh
 Simple Routing -> Define Simple Record
 Value/Route traffic to: IP address or another value
