@@ -1,6 +1,6 @@
 # Project-4: Re-Architecting Web App on AWS Cloud[Cloud Native]
 
-#### In project, I re-architected the web application in other to boost agility and improve business continuity so new features can be added easily for easy scalability and good performance.
+#### In this project, I re-architected the web application in other to boost agility and improve business continuity so new features can be added easily for easy scalability and good performance.
 For my front end:
 #### ✔️ I used Elastic Beanstalk to deploy the application to Tomcat. EBS also created LoadBalancer, CloudWatch alarms, and Auto scaling groups for the app servers.
 For my back end:
