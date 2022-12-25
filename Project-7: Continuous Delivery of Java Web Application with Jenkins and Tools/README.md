@@ -438,7 +438,7 @@ path: Jenkinsfile
 ```sh
 sudo -i
 sudo su - jenkins
-git ls-remote -h -- git@github.com:rumeysakdogan/vprociproject.git HEAD
+git ls-remote -h -- git@github.com:Osomudeya/vprociproject.git HEAD
 ```
 
 - Now its Build time. Our build pipeline is successful!
