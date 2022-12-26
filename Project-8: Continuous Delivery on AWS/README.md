@@ -1,5 +1,6 @@
-For this project, I included continous delivery (CD) to my previous CI project "project 6" using just AWS services.
+## For this project, I included continous delivery (CD) to my previous CI project "project 6" using just AWS services.
 So basically,
+
 🔨 Developers makes regular code commits that triggers our pipeline
 🔨 Commit happens on AWS codebuild, triggering AWS codebuild
 🔨 Codebuild does code analysis (sonar scanner)
@@ -10,7 +11,7 @@ So basically,
 🔨 Beanstalk will be connected to RDS
 🔨 SoftWare Testing will be executed from AWS codebuild service which will come after our "Deploy" stage
 
-For This Project,
+## For This Project,
 💊 I created Beanstalk And RDS
 💊 Deployed DB in RDS
 💊 Created a Deply Job for Beanstalk
