@@ -18,5 +18,6 @@ So basically,
 💊 Created a Job Build to test our software
 💊 Our output and snapshot was uploaded to s3 bucket
 
-GitHub: https://lnkd.in/daeAaswY
-Medium: https://lnkd.in/dUe4BSmp
+#### GitHub: https://lnkd.in/daeAaswY
+
+#### Medium: https://lnkd.in/dUe4BSmp
