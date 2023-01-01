@@ -2,7 +2,7 @@
 
 [_Project Source_](https://www.udemy.com/course/devopsprojects/?src=sac&kw=devops+projects)
 
-#####
+####
 Starting the new year with Ansible,
 
 but before I liter your timeline with my projects.
@@ -27,8 +27,8 @@ Curently, I have been learning ansible and on this project I combined the power 
 
 🩸 If approved, Ansible is used to deploy the artifact to our production server.
 
-#####
+####
 
 #### See detailed practical steps here: https://medium.com/@osomudeyazudonu/continuous-delivery-configuration-management-using-jenkins-ansible-ce38030cdae9
 
-####GitHub: https://github.com/Osomudeya
+#### GitHub: https://github.com/Osomudeya
