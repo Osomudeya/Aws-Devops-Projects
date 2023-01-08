@@ -1,0 +1,26 @@
+I worked on a hybrid continuous delivery project using just JENKINS and AWS.
+This is project is also an extension of my previous CI Pipeline.
+
+
+For this project, I used the following tools.
+
+🛠️ Jenkins for CI
+🛠️ Nexus sonatype repo for artifact storage and download.
+🛠️ sonarqube server for sonar analysis.
+🛠️ Maven to build artifact.
+🛠️ Git as Version control.
+🛠️ Slack for Notification.
+🛠️ Beanstalk for deployment using AWS CLI in Jenkins.
+🛠️ AWS s3 for uploading our artifact
+
+- AWS CLI running from jenkins will upload the artifact to the s3 bucket and then update the beanstalk environment with the new artifact downloaded from the s3 bucket.
+
+To achieve this ..
+
+🩸 Created Elastic Beanstalk Application with two environments: Stage & Prod
+🩸 Created an IAM user with S3 and Beanstalk permissions
+🩸 Added IAM user credentials to Jenkins for AWS CLI
+🩸 Created an S3 bucket to store build artifacts
+🩸 Created new Jenkinsfiles for Stage/Prod pipelines
+🩸 Created two pipelines in Jenkins for Continuous Delivery
+
