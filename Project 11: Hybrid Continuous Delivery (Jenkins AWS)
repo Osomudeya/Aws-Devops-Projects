@@ -1,3 +1,4 @@
+###
 I worked on a hybrid continuous delivery project using just JENKINS and AWS.
 This is project is also an extension of my previous CI Pipeline.
 
@@ -23,4 +24,6 @@ To achieve this ..
 🩸 Created an S3 bucket to store build artifacts
 🩸 Created new Jenkinsfiles for Stage/Prod pipelines
 🩸 Created two pipelines in Jenkins for Continuous Delivery
+###
 
+### See detailed and practical steps here: https://medium.com/@osomudeyazudonu/hybrid-continuous-delivery-jenkins-aws-2bfaddff218d
